@@ -10,13 +10,21 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * 员工管理
+ * @author: Liu
+ */
 @RestController
 @RequestMapping("/emp")
 public class EmpController {
     @Autowired
     private EmpMapper mapper;
-
-    //分页查询
+    /**
+     * 分页查询
+     * @param page
+     * @param size
+     * @return
+     */
     @GetMapping("/findAll/{page}/{size}")
     public Page<EmpHealth> findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
         QueryWrapper<EmpHealth> wrapper=new QueryWrapper<>();

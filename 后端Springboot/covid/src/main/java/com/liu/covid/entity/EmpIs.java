@@ -8,6 +8,9 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * 隔离人员
+ */
 @Data
 public class EmpIs {
     @TableId(type = IdType.AUTO)

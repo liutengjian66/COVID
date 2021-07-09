@@ -7,10 +7,12 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * 物资管理
+ */
 @Data
 @TableName(value = "material_manage")
 public class MaterialManage {
-
 
     @TableId(type = IdType.AUTO)
     private Long id;

@@ -10,6 +10,9 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * 健康打卡
+ */
 @Data
 public class EmpHealth {
 

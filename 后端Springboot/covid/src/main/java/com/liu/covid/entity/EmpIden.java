@@ -10,6 +10,9 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * 疑似人员
+ */
 @Data
 public class EmpIden {
 
