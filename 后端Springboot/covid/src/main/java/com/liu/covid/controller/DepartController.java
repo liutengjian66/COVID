@@ -25,8 +25,4 @@ public class DepartController {
        return service.getAll();
     }
 
-    public static void main(String[] args) {
-        Department department=new Department();
-        department.insert()
-    }
 }

@@ -6,39 +6,39 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
- * 部门(Department)表实体类
+ * 人员管理(Staff)表实体类
  *
  * @author tengjian
- * @since 2021-07-12 15:54:22
+ * @since 2021-07-13 21:43:18
  */
 @Data
-@TableName(value = "department",autoResultMap = true)
-public class Department implements Serializable {
+@TableName(value = "staff",autoResultMap = true)
+public class Staff implements Serializable {
         
     /**
-     * 业务主键
+     * 主键id
      */    
     @TableId(type = IdType.AUTO)   
     private Integer id;
         
     /**
-     * 部门编号
+     * 员工编号
      */
-    @NotEmpty(message = "部门编号不能为空！")
+    @NotEmpty(message = "员工编号不能为空！")
     private String code;
         
     /**
-     * 部门名称
+     * 员工姓名
      */
-    @NotEmpty(message = "部门名称不能为空！")
+    @NotEmpty(message = "员工姓名不能为空！")
     private String name;
         
     /**
-     * 备注
-     */   
-    private String memo;
+     * 联系方式
+     */
+    @NotEmpty(message = "员工联系方式不能为空！")
+    private String phone;
 }

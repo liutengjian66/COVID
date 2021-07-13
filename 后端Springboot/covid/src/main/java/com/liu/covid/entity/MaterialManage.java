@@ -1,30 +1,55 @@
 package com.liu.covid.entity;
 
-import com.baomidou.mybatisplus.annotation.*;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.liu.covid.entity.Enum.ImpEnum;
-import lombok.Data;
-
 import java.util.Date;
+import lombok.Data;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import java.io.Serializable;
 
 /**
- * 物资管理
+ * 防疫物资管理(MaterialManage)表实体类
+ *
+ * @author tengjian
+ * @since 2021-07-13 21:55:38
  */
 @Data
-@TableName(value = "material_manage")
-public class MaterialManage {
-
-    @TableId(type = IdType.AUTO)
-    private Long id;
+@TableName(value = "material_manage",autoResultMap = true)
+public class MaterialManage implements Serializable {
+        
+    /**
+     * 主键id
+     */    
+    @TableId(type = IdType.AUTO)   
+    private Integer id;
+        
+    /**
+     * 物资名称
+     */   
     private String name;
-    private int count;
-    private String type;
-    @TableField(value = "isImp")
-    private ImpEnum isImp;
-    private String charge;
-    private Long cnum;
-    @TableField(value = "updateTime" ,fill = FieldFill.INSERT_UPDATE)
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+        
+    /**
+     * 物资数量
+     */   
+    private Integer number;
+        
+    /**
+     * 物资单位
+     */   
+    private String unit;
+        
+    /**
+     * 是否为重要物资
+     */   
+    private Object isImportment;
+        
+    /**
+     * 负责人id
+     */   
+    private Integer principalId;
+        
+    /**
+     * 物资更新时间
+     */   
     private Date updateTime;
-
 }

@@ -8,14 +8,14 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 
 /**
- * 健康打卡(EmpHealth)表实体类
+ * 隔离人员(EmpIsolated)表实体类
  *
  * @author tengjian
  * @since 2021-07-13 21:55:38
  */
 @Data
-@TableName(value = "emp_health",autoResultMap = true)
-public class EmpHealth implements Serializable {
+@TableName(value = "emp_isolated",autoResultMap = true)
+public class EmpIsolated implements Serializable {
         
     /**
      * 主键id
@@ -24,29 +24,34 @@ public class EmpHealth implements Serializable {
     private Integer id;
         
     /**
-     * 姓名
-     */   
-    private String name;
-        
-    /**
-     * 性别
-     */   
-    private Object sex;
-        
-    /**
-     * 手机号码
-     */   
-    private Integer phonenum;
-        
-    /**
      * 体温
      */   
     private Double temperature;
         
     /**
-     * 风险地区
+     * 隔离方式
      */   
-    private String riskArea;
+    private String type;
+        
+    /**
+     * 隔离地点
+     */   
+    private String isolatedPlace;
+        
+    /**
+     * 隔离开始时间
+     */   
+    private Date beginDate;
+        
+    /**
+     * 隔离结束时间
+     */   
+    private Date endDate;
+        
+    /**
+     * 出发地
+     */   
+    private String leavedArea;
         
     /**
      * 备注
@@ -54,9 +59,9 @@ public class EmpHealth implements Serializable {
     private String memo;
         
     /**
-     * 打卡时间
+     * 途径地
      */   
-    private Date createTime;
+    private String arrivedArea;
         
     /**
      * 部门id
@@ -64,7 +69,7 @@ public class EmpHealth implements Serializable {
     private Integer departmentId;
         
     /**
-     * 员工编号
+     * 打卡记录id
      */   
-    private String code;
+    private Integer empHealthId;
 }

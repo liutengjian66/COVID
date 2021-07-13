@@ -4,10 +4,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.liu.covid.entity.Department;
 
 /**
- * 部门(department)表服务接口
+ * 部门(Department)表服务接口
  *
- * @author Tengjian
- * @since 2021/07/08
+ * @author tengjian
+ * @since 2021-07-12 15:54:22
  */
 public interface DepartmentService extends IService<Department> {
 
