@@ -11,4 +11,4 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 ```
 
-vue项目需要在项目命令行使用npm install命令 下载依赖。
+vue项目需要在项目命令行使用npm install命令 下载依赖。下载完成后使用npm run serve启动项目，启动后便会显示前端项目的访问地址。
